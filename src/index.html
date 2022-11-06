@@ -1,12 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <title>My First Parcel App</title>
-    <link rel="stylesheet" href="styles.scss">
-    <script type="module" src="app.js"></script>
-  </head>
-  <body>
-    <h1 class="the-heading">Hello, World!</h1>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <title>MSA 21 Download</title>
+  <link rel="stylesheet" href="styles.scss">
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="container">
+        <div class="flex-row">
+          <div class="downloads-col-1">
+            <div class="has-left-border">
+              <div class="text-container">
+                <h1 class="downloads-title">Downloads</h1>
+              </div>
+            </div>
+            <div class="text-container">
+              <p class="downloads-description">
+                Lorem ipsum dolor sit amet, consectetur.
+              </p>
+            </div>
+
+            <div class="button-wrapper button-wrapper-desktop">
+              <button class="downloads-button">Download all (desktop)</button>
+            </div>
+          </div>
+          <div class="downloads-col-2">
+            <picture>
+              <source srcset="./images/downloads_desktop.png" media="(min-width: 700px)">
+              <img class="downloads-image" src="./images/downloads_mobile.png">
+            </picture>
+          </div>
+        </div>
+        <div class="button-wrapper button-wrapper-mobile">
+          <button class="downloads-button">Download all (mobile)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
