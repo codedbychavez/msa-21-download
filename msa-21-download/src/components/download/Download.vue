@@ -21,8 +21,8 @@
           </div>
           <div class="downloads-col-2">
             <picture>
-              <source srcset="./images/downloads_desktop.png" media="(min-width: 700px)">
-              <img class="downloads-image" src="./images/downloads_mobile.png">
+              <source srcset="@/assets/images/downloads_desktop.png" media="(min-width: 700px)">
+              <img class="downloads-image" src="@/assets/images/downloads_mobile.png">
             </picture>
           </div>
         </div>
@@ -35,6 +35,10 @@
 </template>
 
 <script>
+
+export default {
+  
+}
 
 </script>
 
