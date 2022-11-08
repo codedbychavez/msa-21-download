@@ -1,17 +1,17 @@
 <template>
   <main>
     <div>
-      <ModuleDownload />
+      <ModuleDownloads />
     </div>
   </main>
 </template>
 
 <script>
-import ModuleDownload from './components/module/ModuleDownload.vue';
+import ModuleDownloads from './components/module/ModuleDownloads.vue';
 
 export default {
   components: {
-    ModuleDownload,
+    ModuleDownloads,
   }
 }
 
