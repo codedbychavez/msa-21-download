@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Icon from "../Icons/Icon.vue";
+import Icon from "@/components/Icons/Icon.vue";
 export default {
   props: {
     canShowModal: Boolean,

@@ -57,8 +57,8 @@
 </template>
 
 <script>
-import Modal from "./Modal.vue";
-import data from "../data/downloads.json";
+import Modal from "@/components/Downloads/Modal.vue";
+import data from "@/components/data/downloads.json";
 
 export default {
   data() {

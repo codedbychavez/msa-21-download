@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Downloads from "../Downloads/Downloads.vue";
+import Downloads from "@/components/Downloads/Downloads.vue";
 
 export default {
   components: {
