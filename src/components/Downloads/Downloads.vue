@@ -12,8 +12,19 @@
         </p>
       </div>
 
+      <!-- Shown on desktop view -->
       <div class="button-wrapper-desktop">
-        <button class="downloads-button">Download all (desktop)</button>
+        <button
+          @click="
+            () => {
+              showModal = !showModal;
+            }
+          "
+          class="downloads-button"
+        >
+          Download all (4)
+        </button>
+        <Modal :canShowModal="showModal" :items="downloads" />
       </div>
     </div>
     <div class="downloads-col-2">
@@ -29,22 +40,55 @@
       </picture>
     </div>
   </div>
+  <!-- Shown on mobile view -->
   <div class="button-wrapper-mobile">
-    <button class="downloads-button">Download all (mobile)</button>
+    <button
+      @click="
+        () => {
+          showModal = !showModal;
+        }
+      "
+      class="downloads-button"
+    >
+      Download all (4)
+    </button>
+    <Modal :canShowModal="showModal" :items="downloads" />
   </div>
 </template>
 
 <script>
-export default {};
+import Modal from "./Modal.vue";
+import data from "../data/downloads.json";
+
+export default {
+  data() {
+    return {
+      showModal: false,
+      downloads: data.downloads,
+    };
+  },
+  components: {
+    Modal,
+  },
+};
 </script>
 
 <style lang="scss">
+// Positioning the modal relative to it's toggle button
+
+.modal {
+  position: absolute;
+  // NB: Adjust if needed
+  top: -15em;
+  left: 16px;
+}
+
 .has-left-border {
   display: flex;
   align-items: center;
   height: 48px;
   // NB: Primary/Red
-  border-left: 2px solid #FF1F27;
+  border-left: 2px solid #ff1f27;
 }
 
 .downloads-title {
@@ -63,8 +107,10 @@ export default {};
   width: 100%;
 }
 
-.button-wrapper-mobile, .button-wrapper-desktop {
+.button-wrapper-mobile,
+.button-wrapper-desktop {
   @extend .text-container;
+  position: relative;
 }
 
 .button-wrapper-mobile {
@@ -80,7 +126,6 @@ export default {};
   background-color: transparent;
   border: 0;
   cursor: pointer;
-
 }
 
 @media (min-width: 700px) {
