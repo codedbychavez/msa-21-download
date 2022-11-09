@@ -30,12 +30,44 @@
     </div>
   </div>
   <div class="button-wrapper-mobile">
-    <button class="downloads-button">Download all (mobile)</button>
+    <button @click="() => {visibleLiveDemo = true}" class="downloads-button">Download all (mobile)</button>
   </div>
+  <CModal :visible="visibleLiveDemo" @close="() => { visibleLiveDemo = false }">
+    <CModalHeader>
+      <CModalTitle>Modal title</CModalTitle>
+    </CModalHeader>
+    <CModalBody>Woohoo, you're reading this text in a modal!</CModalBody>
+    <CModalFooter>
+      <button @click="() => { visibleLiveDemo = false }">
+        Close
+      </button>
+    </CModalFooter>
+  </CModal>
 </template>
 
 <script>
-export default {};
+import { CModal } from '@coreui/vue'
+import { CModalHeader } from '@coreui/vue'
+import { CModalTitle } from '@coreui/vue'
+import { CModalBody } from '@coreui/vue'
+import { CModalFooter } from '@coreui/vue'
+
+
+
+export default {
+  data() {
+    return {
+      visibleLiveDemo: false,
+    }
+  },
+  components: {
+    CModal,
+    CModalHeader,
+    CModalTitle,
+    CModalBody,
+    CModalFooter,
+  }
+};
 </script>
 
 <style lang="scss">
